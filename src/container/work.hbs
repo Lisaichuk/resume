@@ -13,9 +13,9 @@
                     {{#each works}}
                     <li>
                         <div>{{position}}</div>
-
                         <br>
-
+                        <div><b>{{company.name}}</b></div>
+                        <br>
                         <div>
                             {{duration.from}}
                             -
@@ -25,7 +25,6 @@
                             (досі працюю)
                             {{/if}}
                         </div>
-
                         <br>
 
                         <div>{{> link text=company.name href=company.url blank=true noLine=true}}</div>
