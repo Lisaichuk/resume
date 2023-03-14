@@ -1,0 +1,83 @@
+{{#with web}}
+<h1>Web languages</h1>
+
+{{#each languages}}
+<section>
+    <ul>
+        <li>
+            <div>
+                <h2>{{name}}</h2>
+            </div>
+            <hr>
+            <div><b>Version:</b> {{version}}</div>
+            <div>
+                <blockquote>{{description}}</blockquote>
+            </div>
+
+            {{#if elements}}
+            <h3>Elements:</h3>
+            {{/if}}
+            {{#each elements}}
+            <ul>
+                <li>
+                    <div><b><u>{{name}}</u></b> - {{description}}</div>
+
+                    <h4><em>Attributes:</em></h4>
+                    {{#each attributes}}
+                    <ul>
+                        <li>
+                            <div><b>{{name}}</b> - {{description}}</div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                    <br>
+                </li>
+            </ul>
+            {{/each}}
+
+            {{#if properties}}
+            <h3>Properties:</h3>
+            {{/if}}
+            {{#each properties}}
+            <ul>
+                <li>
+                    <div><b><u>{{name}}</u></b> - {{description}}</div>
+
+                    <h4><em>Values:</em></h4>
+                    {{#each values}}
+                    <ul>
+                        <li>
+                            <div><b>{{value}}</b> - {{description}}</div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                    <br>
+                </li>
+            </ul>
+            {{/each}}
+
+            {{#if functions}}
+            <h3>Functions:</h3>
+            {{/if}}
+            {{#each functions}}
+            <ul>
+                <li>
+                    <div><b><u>{{name}}</u></b> - {{description}}</div>
+
+                    <h4><em>Parameters:</em></h4>
+                    {{#each parameters}}
+                    <ul>
+                        <li>
+                            <div><b>{{name}}</b> (type - {{type}}) - {{description}}</div>
+                        </li>
+                    </ul>
+                    {{/each}}
+                    <br>
+                </li>
+            </ul>
+            {{/each}}
+        </li>
+    </ul>
+</section>
+{{/each}}
+{{/with}}
