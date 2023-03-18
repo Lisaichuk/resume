@@ -1,150 +1,75 @@
-<main>
-    <div class="row gy-5">
-
-        <section class="col-12">
-            <div class="card text-bg-dark">
-                <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
-                <div class="card-body">
-                    <h5 class="card-title text-bg-primary">Product #1324</h5>
-                    <p class="text-bg-secondary">USB hab Type C 12 in 1 HDMI <br> VGA AUX 3.5 mm</p>
-                    <a href="#" class="btn btn-primary">Open</a>
+<main class="p-5">
+    <div class="row">
+        <div class="col-12 mb-5">
+            <div class="nav nav-tabs">
+                <div class="nav-item">
+                    <a href="#" class="nav-link active">Main</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link active">Catalog</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link disabled">Shop list</a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="col-3">
+        <div class="col-5 pe-5">
             <div class="card">
-                <div class="card-header">
-                    <div>Menu</div>
-                </div>
-
-                <ul class="list group list-group-flush">
-                    <li class="list-group-item">
-                        <a href="#" class="btn btn-link">Home page</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="btn btn-link">Summary page</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="#" class="btn btn-link">Skills page</a>
-                    </li>
-                </ul>
-
-                <div class="card-footer">
-                    <button class="btn btn-dark btn-sm">Update List</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="col-9">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>
-                            #id
-                        </th>
-                        <th>
-                            name
-                        </th>
-                        <th>
-                            age
-                        </th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <th>1</th>
-                        <th>Jhon</th>
-                        <th>35</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th>Ivan</th>
-                        <th>29</th>
-                    </tr>
-                    <tr>
-                        <th>3</th>
-                        <th>Petro</th>
-                        <th>19</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th>Ivan</th>
-                        <th>29</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th>Ivan</th>
-                        <th>29</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th>Ivan</th>
-                        <th>29</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th>Ivan</th>
-                        <th>29</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th>Ivan</th>
-                        <th>29</th>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section class="col-12">
-            <div class="row g-2">
-                <div class="col-3">
-                    <div class="card text-bg-success">
-                        <div class="card-header text-center">Header</div>
-                        <div class="card-body text-center">
-                            <h6 class="card-title">This is title</h6>
-                            <p>This is content of our box</p>
-                            <button class="btn btn-light">Click!</button>
+                <div class="card-body">
+                    {{!-- або "pt-4 pb-3 px-4" замість "card-body" --}}
+                    <div class="nav flex-column">
+                        <div class="nav-item mb-2">
+                            <div class="card">
+                                <a href="/summary" class="nav-link">Home page</a>
+                            </div>
                         </div>
-                        <div class="card-footer text-center">Footer</div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card text-bg-success">
-                        <div class="card-header text-center">Header</div>
-                        <div class="card-body text-center">
-                            <h6 class="card-title">This is title</h6>
-                            <p>This is content of our box</p>
-                            <button class="btn btn-light">Click!</button>
+
+                        <div class="nav-item mb-2">
+                            <div class="card">
+                                <a href="#" class="nav-link active">Bootstrap</a>
+                            </div>
                         </div>
-                        <div class="card-footer text-center">Footer</div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card text-bg-success">
-                        <div class="card-header text-center">Header</div>
-                        <div class="card-body text-center">
-                            <h6 class="card-title">This is title</h6>
-                            <p>This is content of our box</p>
-                            <button class="btn btn-light">Click!</button>
+
+                        <div class="nav-item mb-2">
+                            <div class="card">
+                                <a href="/skills" class="nav-link disabled">FAQ page</a>
+                            </div>
                         </div>
-                        <div class="card-footer text-center">Footer</div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card text-bg-success">
-                        <div class="card-header text-center">Header</div>
-                        <div class="card-body text-center">
-                            <h6 class="card-title">This is title</h6>
-                            <p>This is content of our box</p>
-                            <button class="btn btn-light">Click!</button>
-                        </div>
-                        <div class="card-footer text-center">Footer</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="col-7">
+            <div class="row">
+                <div class="col-12">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">PC та Ноутбук</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">Macbook</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary rounded-pill mb-3">Click me</button>
+
+                    <div class="alert alert-dark">
+                        <h6 class="mb-2">
+                            Hello world! <span class="badge text-bg-primary rounded-pill text-uppercase">new</span>
+                        </h6>
+
+                        <p cllass="m-0">This is info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </main>
