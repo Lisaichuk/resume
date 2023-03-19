@@ -48,8 +48,7 @@
             <ul class="d-flex list-unstyled">
                 {{#each tabs}}
                 <li>
-                    <div class="nav-link {{#if isActive}} active {{/if}}">
-                        {{text}}
+                    <div class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}">{{text}}
                     </div>
                 </li>
                 {{/each}}
