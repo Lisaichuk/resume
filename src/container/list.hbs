@@ -1,0 +1,91 @@
+<div>
+    <ul>
+        {{#each list}}
+        <li>
+            {{#if @first}} first {{/if}}
+            <span>{{name}}</span>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<div>
+    <ul>
+        {{#each list}}
+        <li>
+            <button {{#if @last}} disabled {{/if}}>{{name}}</button>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<div>
+    <ul>
+        {{#each list}}
+        <li>
+            <button {{#if @last}} disabled {{/if}}>{{name}} - {{@index}}</button>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<div>
+    <ul>
+        {{#each list}}
+        <li>
+            <button {{#if @last}} disabled {{/if}}>{{name}} - {{@index}}</button>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+<div>
+    <ul>
+        {{#each user}}
+        <li>
+            {{this}}
+        </li>
+        {{/each}}
+    </ul>
+
+    {{!-- // якщо ітерується об'єкт
+    user: {
+    name: 'Ivan',
+    role: 'Admin',
+    isConfirm: true,
+    age: 32,
+    }, --}}
+</div>
+
+<div>
+    <ul>
+        {{#each user}}
+        <li>
+            {{@key}}:
+
+            {{#if value}}{{value}}{{else}}{{text}}{{/if}},
+            {{!--
+            {{value}} {{text}}
+            {{#if value}} {{value}} {{/if}}
+            {{#if text}} {{text}} {{/if}}
+            --}}
+        </li>
+        {{/each}}
+    </ul>
+
+    {{!-- user: {
+    name: {
+    value: 'Ivan',
+    text: "Ivanov",
+    },
+    role: {
+    text: 'Admin',
+    },
+    isConfirm: {
+    value: true,
+    },
+    age: {
+    value: 32,
+    },
+    }, --}}
+</div>
