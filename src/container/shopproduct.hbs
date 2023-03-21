@@ -4,17 +4,17 @@
 
             <div class="col-6">
 
-                {{#each breadcrumb}}
                 <div class="row">
                     <div class="col-12">
                         <ol class="breadcrumb">
+                            {{#each breadcrumb}}
                             <li class="breadcrumb-item">
                                 <a href="{{url}}">{{name}}</a>
                             </li>
+                            {{/each}}
                         </ol>
                     </div>
                 </div>
-                {{/each}}
             </div>
         </div>
     </section>
@@ -57,7 +57,9 @@
                     <tbody>
                         {{#each body}}
                         <tr>
+                            {{#each this}}
                             <td>{{this}}</td>
+                            {{/each}}
                         </tr>
                         {{/each}}
                     </tbody>
@@ -92,7 +94,7 @@
             </div>
 
             <div class="card p-3">
-                <div class="col-9">
+                <div class="col-12">
                     {{#each actionList}}
                     {{#if isWarning}} <button class="btn btn-warning me-2">{{name}}</button>{{/if}}
                     {{#if isError}} <button class="btn btn-outline-danger me-2">{{name}}</button>{{/if}}
