@@ -1,0 +1,17 @@
+{{#with navigation}}
+<div class="card pt-3 pb-2 px-2 mb-4">
+
+    <nav class="row">
+        <div class="col-6">
+            <h1>{{Logo}}</h1>
+        </div>
+
+        <div class="col-6 text-end">
+            {{#each links}}
+            <a href="{{href}}" class="btn btn-link">{{text}}</a>
+            {{/each}}
+            <a href="#" class="btn btn-link disabled">Disabled</a>
+        </div>
+    </nav>
+</div>
+{{/with}}

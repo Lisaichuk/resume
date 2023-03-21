@@ -1,72 +1,41 @@
-<header>
-    {{> shopheader}}
-</header>
-
 <main>
     <section>
-        <div class="row col-12">
-
-            <div class="col-6">
-
-                <div class="row">
-                    <div class="col-12">
-                        <ol class="breadcrumb">
-                            {{#each breadcrumb}}
-                            <li class="breadcrumb-item">
-                                <a href="{{url}}">{{name}}</a>
-                            </li>
-                            {{/each}}
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{>breadcrumb}}
 
         <div class="row col-12">
 
             {{#with newsData}}
-            <div class="card">
-                <div class="card-img-top">
-                    <img src="{{photo}}">
-                </div>
-                <div class="card-header">
-                    <div>{{heading}}</div>
-                    <p>{{description}}</p>
-                </div>
-                <div class="card-body">
-                    {{#each body}}
-                    <div class="card-title">{{title}}</div>
-                    <p>{{text}}</p>
-                    {{/each}}
-                </div>
-            </div>
+            <img class="m-2" src="{{photo}}">
+
+            {{#with head}}
+            <h2 class="m-3">{{heading}}</h2>
+            <p class="m-2">{{description}}</p>
+            {{/with}}
+
+            {{#each body}}
+            <h4 class="m-3">{{title}}</h4>
+            <p class="m-2">{{text}}</p>
+            {{/each}}
+
             {{/with}}
 
         </div>
     </section>
 
-    <hr>
+    <hr class="my-5">
 
     <section>
         {{#with newsOtherBlock}}
-        <div class="row col-12">
-            <h2 class="text-center">{{title}}</h2>
-
-            {{> shopcard}}
-        </div>
+        {{> shoppost}}
         {{/with}}
     </section>
 
-    <hr>
+    <hr class="my-5">
 
     <section>
         {{> shopaction}}
     </section>
 
-    <hr>
+    <hr class="my-5">
 
 </main>
-
-<footer>
-    {{> shopfooter}}
-</footer>

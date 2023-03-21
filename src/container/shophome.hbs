@@ -1,41 +1,7 @@
-<header>
-    {{#with navigation}}
-    <div class="card pt-3 pb-2 px-2">
-
-        <nav class="row">
-            <div class="col-6">
-                <h1>{{Logo}}</h1>
-            </div>
-
-            <div class="col-6 text-end">
-                {{#each links}}
-                <a href="{{href}}" class="btn btn-link ">{{text}}</a>
-                {{/each}}
-            </div>
-        </nav>
-    </div>
-    {{/with}}
-</header>
-
 <main>
     <section>
         {{#with newsBlock}}
-        <div class="row col-12">
-            <h2 class="text-center mt-5 mb-3">{{title}}</h2>
-
-            {{#each cards}}
-            <div class="col-3 g-3">
-                <div class="card text-bg-secondary mb-2">
-                    <div class="card-header">
-                        {{title}}
-                        {{#if isTop}} <div class="badge text-bg-danger rounded-pill">TOP</div>{{/if}}
-                        {{#if idNew}} <div class="badge text-bg-success rounded-pill">New</div>{{/if}}
-                    </div>
-                    <div class="card-body">{{description}}</div>
-                </div>
-            </div>
-            {{/each}}
-        </div>
+        {{> shoppost}}
         {{/with}}
     </section>
 
@@ -100,38 +66,9 @@
     <hr class="my-5">
 
     <section>
-        {{#with service}}
-        <div class="alert bg-success text-light text-center py-3">
-            <h2>{{title}}</h2>
-            <p>{{description}}</p>
-
-            {{#each buttons}}
-            <a rel="{{type}}" href="{{link}}" class="btn btn-primary">{{text}}</a>
-            {{/each}}
-        </div>
-        {{/with}}
+        {{> shopaction}}
     </section>
 
     <hr class="my-5">
 
 </main>
-
-<footer>
-
-    <div class="row col-10">
-
-        {{#each footer}}
-        <div class="col-2 flex-column">
-            <ul class="nav">
-                {{#each this}}
-                <li class="">
-                    <a href="{{link}}" class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        {{/each}}
-
-    </div>
-
-</footer>
