@@ -1,22 +1,3 @@
-<header>
-    {{#with navigation}}
-    <div class="card pt-3 pb-2 px-2">
-
-        <nav class="row">
-            <div class="col-6">
-                <h1>{{Logo}}</h1>
-            </div>
-
-            <div class="col-6 text-end">
-                {{#each links}}
-                <a href="{{href}}" class="btn btn-link ">{{text}}</a>
-                {{/each}}
-            </div>
-        </nav>
-    </div>
-    {{/with}}
-</header>
-
 <main>
     <section>
         {{#with newsBlock}}
@@ -115,23 +96,3 @@
     <hr class="my-5">
 
 </main>
-
-<footer>
-
-    <div class="row col-10">
-
-        {{#each footer}}
-        <div class="col-2 flex-column">
-            <ul class="nav">
-                {{#each this}}
-                <li class="">
-                    <a href="{{link}}" class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        {{/each}}
-
-    </div>
-
-</footer>
