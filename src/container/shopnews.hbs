@@ -1,0 +1,72 @@
+<header>
+    {{> shopheader}}
+</header>
+
+<main>
+    <section>
+        <div class="row col-12">
+
+            <div class="col-6">
+
+                <div class="row">
+                    <div class="col-12">
+                        <ol class="breadcrumb">
+                            {{#each breadcrumb}}
+                            <li class="breadcrumb-item">
+                                <a href="{{url}}">{{name}}</a>
+                            </li>
+                            {{/each}}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row col-12">
+
+            {{#with newsData}}
+            <div class="card">
+                <div class="card-img-top">
+                    <img src="{{photo}}">
+                </div>
+                <div class="card-header">
+                    <div>{{heading}}</div>
+                    <p>{{description}}</p>
+                </div>
+                <div class="card-body">
+                    {{#each body}}
+                    <div class="card-title">{{title}}</div>
+                    <p>{{text}}</p>
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        {{#with newsOtherBlock}}
+        <div class="row col-12">
+            <h2 class="text-center">{{title}}</h2>
+
+            {{> shopcard}}
+        </div>
+        {{/with}}
+    </section>
+
+    <hr>
+
+    <section>
+        {{> shopaction}}
+    </section>
+
+    <hr>
+
+</main>
+
+<footer>
+    {{> shopfooter}}
+</footer>
