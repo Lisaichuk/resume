@@ -1,0 +1,77 @@
+<main>
+    <section>
+        <div class="row col-12 my-5">
+            {{#with header}}
+            <div class="col-6">
+                <h1>{{title}}</h1>
+            </div>
+
+            <div class="col-6 text-end gx-0 mt-1">
+                {{#with button}}
+                <a href="{{link}}" class="btn btn-outline-secondary">{{text}}</a>
+                {{/with}}
+            </div>
+            {{/with}}
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section>
+        {{> cartGoodsItem}}
+    </section>
+
+    <hr class="my-5">
+
+    <section>
+        <div class="row col-12">
+            {{#with total}}
+            <div class="col-8">
+                <h2>{{title}}</h2>
+                <div class="display-6 my-2"><b>{{amount}}</b></div>
+                <div>{{delivery}}</div>
+            </div>
+
+            <div class="col-4">
+                {{#each buttons}}
+                {{#if isSuccess}} <a href="{{link}}" class="btn btn-success mx-3 my-3">{{text}}</a> {{/if}}
+                {{#if isOutline}} <a href="{{link}}" class="btn btn-outline-success mx-3">{{text}}</a> {{/if}}
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section>
+        {{#with goodsOtherBlock}}
+        <div class="row col-12">
+            <h2 class="text-center mb-3">{{title}}</h2>
+
+            {{> shopcard}}
+        </div>
+        {{/with}}
+    </section>
+
+    <hr class="my-5">
+
+    <section>
+        {{#with subscribe}}
+        <div class="alert bg-dark text-light row">
+            <div class="col-6">
+                <h2>{{header}}</h2>
+                <p>{{description}}</p>
+            </div>
+            <div class="col-6 text-end">
+                {{#each buttons}}
+                <a rel="{{type}}" class="btn btn-primary me-1 mt-4" href="{{link}}">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </section>
+
+    <hr class="my-5">
+
+</main>
