@@ -1,22 +1,7 @@
 <main>
     <section>
         {{#with newsBlock}}
-        <div class="row col-12">
-            <h2 class="text-center mt-5 mb-3">{{title}}</h2>
-
-            {{#each cards}}
-            <div class="col-3 g-3">
-                <div class="card text-bg-secondary mb-2">
-                    <div class="card-header">
-                        {{title}}
-                        {{#if isTop}} <div class="badge text-bg-danger rounded-pill">TOP</div>{{/if}}
-                        {{#if idNew}} <div class="badge text-bg-success rounded-pill">New</div>{{/if}}
-                    </div>
-                    <div class="card-body">{{description}}</div>
-                </div>
-            </div>
-            {{/each}}
-        </div>
+        {{> shoppost}}
         {{/with}}
     </section>
 
@@ -81,16 +66,7 @@
     <hr class="my-5">
 
     <section>
-        {{#with service}}
-        <div class="alert bg-success text-light text-center py-3">
-            <h2>{{title}}</h2>
-            <p>{{description}}</p>
-
-            {{#each buttons}}
-            <a rel="{{type}}" href="{{link}}" class="btn btn-primary">{{text}}</a>
-            {{/each}}
-        </div>
-        {{/with}}
+        {{> shopaction}}
     </section>
 
     <hr class="my-5">

@@ -1,0 +1,16 @@
+<div class="row col-12">
+    <h2 class="text-center mb-3">{{title}}</h2>
+
+    {{#each cards}}
+    <div class="col-3 g-3">
+        <div class="card text-bg-secondary mb-2">
+            <div class="card-header">
+                {{title}}
+                {{#if isTop}} <div class="badge text-bg-danger rounded-pill">TOP</div>{{/if}}
+                {{#if idNew}} <div class="badge text-bg-success rounded-pill">New</div>{{/if}}
+            </div>
+            <div class="card-body">{{description}}</div>
+        </div>
+    </div>
+    {{/each}}
+</div>
