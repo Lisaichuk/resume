@@ -1,12 +1,10 @@
-<section>
-    {{#with service}}
-    <div class="alert bg-success text-light text-center py-3">
-        <h2>{{title}}</h2>
-        <p>{{description}}</p>
+{{#with service}}
+<div class="alert bg-success text-light text-center py-3">
+    <h2>{{title}}</h2>
+    <p>{{description}}</p>
 
-        {{#each buttons}}
-        <a rel="{{type}}" href="{{link}}" class="btn btn-primary">{{text}}</a>
-        {{/each}}
-    </div>
-    {{/with}}
-</section>
+    {{#each buttons}}
+    <a rel="{{type}}" href="{{link}}" class="btn btn-primary">{{text}}</a>
+    {{/each}}
+</div>
+{{/with}}
