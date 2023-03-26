@@ -1,0 +1,30 @@
+{{#each itemList}}
+<div class="row border-bottom py-2">
+    <div class="col-12 d-flex">
+
+        <div class="col-4">
+            <div class="mt-4">{{number}}</div>
+            <div class="mb-4">{{status}}</div>
+        </div>
+
+        <div class="col-1">
+            {{#with amount}}
+            <div class="mt-4">{{title}}</div>
+            <div class="mb-4">{{value}}</div>
+            {{/with}}
+        </div>
+
+        <div class="col-5 mx-2">
+            {{#each images}}
+            <img src="{{this}}" alt="photos">
+            {{/each}}
+        </div>
+
+        <div class="col-2">
+            {{#with button}}
+            {{#if isPrimary}} <a href="{{link}}" class="btn btn-primary my-4">{{text}}</a> {{/if}}
+            {{/with}}
+        </div>
+    </div>
+</div>
+{{/each}}
