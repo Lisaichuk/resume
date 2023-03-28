@@ -1,17 +1,11 @@
-<div class="row col-12 g-2">
+<div class="row col-12 g-0 mt-5">
 
-    <div class="col-6 ms-3">
+    <ul class="breadcrumb">
+        {{#each breadcrumb}}
+        <li class="breadcrumb-item">
+            {{#if url}} <a href="{{url}}">{{name}}</a> {{else}} {{name}} {{/if}}
+        </li>
+        {{/each}}
+    </ul>
 
-        <div class="row">
-            <div class="col-12">
-                <ol class="breadcrumb">
-                    {{#each breadcrumb}}
-                    <li class="breadcrumb-item">
-                        <a href="{{url}}">{{name}}</a>
-                    </li>
-                    {{/each}}
-                </ol>
-            </div>
-        </div>
-    </div>
 </div>
