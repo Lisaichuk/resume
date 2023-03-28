@@ -2832,6 +2832,10 @@ router.get('/shoporder', function (req, res) {
 })
 
 // ================================================================
+<<<<<<< HEAD
+
+=======
+>>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -3056,15 +3060,26 @@ router.get('/shopnews', function (req, res) {
 
 // ================================================================
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
 
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
+<<<<<<< HEAD
+router.get('/shopreview', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shopreview', {
+=======
 router.get('/shopcatalog', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcatalog', {
+>>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
     layout: 'shop',
     navigation: {
       links: [
@@ -3083,6 +3098,162 @@ router.get('/shopcatalog', function (req, res) {
       ],
       Logo: 'Logo',
     },
+<<<<<<< HEAD
+    formBlock: {
+      header: 'Відгуки покупців про Ноут',
+      rating: {
+        title: 'Оцінка',
+        value: '4.5/5',
+      },
+      actionBlock: {
+        tabs: [
+          { text: 'Про товар' },
+          { text: 'Характеристики' },
+          { text: 'Відгуки', isActive: true },
+        ],
+        field: {
+          placeholder: 'Залиште відгук про товар',
+          button: {
+            text: 'Написати відгук',
+            link: 'https://www.youtube.com/',
+          },
+        },
+      },
+      feedbackBlock: {
+        title:
+          'Хочете поділитись своєю думкою про наш магазин?',
+        buttons: [
+          {
+            text: 'Додати відгук',
+            isWarning: true,
+            link: 'https://www.youtube.com/',
+          },
+          {
+            text: 'Позитивні відгуки',
+            isSuccess: true,
+            link: 'https://www.youtube.com/',
+          },
+          {
+            text: 'Негативні відгуки',
+            isDanger: true,
+            link: 'https://www.youtube.com/',
+          },
+        ],
+      },
+      goodsInfo: {
+        photo: 'https://picsum.photos/110/100',
+        name: 'Ноут Asus',
+        price: '25 000 ₴',
+        buttons: [
+          {
+            text: 'Купити',
+            isPrimary: true,
+            link: 'https://www.youtube.com/',
+          },
+          {
+            text: 'Купити в кредит',
+            isSecondary: true,
+            link: 'https://www.youtube.com/',
+          },
+        ],
+        seller: {
+          title: 'Продавець',
+          value: 'Machinery',
+        },
+      },
+    },
+
+    reviewList: [
+      {
+        title: {
+          userName: 'Іван Іванов',
+          caption: 'Відгук покупця',
+          date: '1 січня 2023',
+        },
+        reviewBody: {
+          seller: {
+            title: 'Продавець',
+            value: 'Machinery',
+          },
+          rating: {
+            title: 'Оцінка',
+            value: '5/5',
+          },
+          text: [
+            "Цей ноутбук має гарний дизайн та добре виконує свої основні функції. Швидкість роботи та продуктивність в цілому є на задовільному рівні. Крім того, присутній достатній обсяг пам'яті та потужність акумулятора.",
+            ' Однак, можливі проблеми з перегрівом під час тривалого використання, та може бути недостатньої ємності жорсткого диска для потреб користувача. Крім того, ціна може бути дещо високою порівняно з аналогічними моделями.',
+          ],
+          advantages: {
+            title: 'Переваги',
+            text: 'Дизайн, швидкість роботи, обсяг пам’яті, акумулятор',
+          },
+          disadvantages: {
+            title: 'Недоліки',
+            text: 'Перегрів, ємкість жосткого диску',
+          },
+          images: [
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+            'https://picsum.photos/110/100',
+          ],
+          coments: [
+            {
+              userName: 'Користувач',
+              date: '1 січня 2023',
+              text: 'Дякую за відгук, я подумаю про недоліки, про які ви згадували, перш ніж зробити покупку.',
+            },
+            {
+              userName: 'Користувач',
+              date: '3 січня 2023',
+              text: 'Дякую за корисний відгук! Це допомогло мені зробити вибір щодо покупки ноутбука.',
+            },
+            {
+              userName: 'Користувач',
+              date: '10 січня 2023',
+              text: 'Дякую за відгук, але я хотів би дізнатися більше деталей про проблеми з перегрівом, щоб зробити зважений вибір перед покупкою.',
+            },
+          ],
+        },
+      },
+      {
+        title: {
+          userName: 'Петро Петров',
+          caption: 'Відгук покупця',
+          date: '1 січня 2023',
+        },
+        reviewBody: {
+          seller: {
+            title: 'Продавець',
+            value: 'Machinery',
+          },
+          rating: {
+            title: 'Оцінка',
+            value: '5/5',
+          },
+          text: [
+            "Цей ноутбук має гарний дизайн та добре виконує свої основні функції. Швидкість роботи та продуктивність в цілому є на задовільному рівні. Крім того, присутній достатній обсяг пам'яті та потужність акумулятора.",
+          ],
+          advantages: {
+            title: 'Переваги',
+            text: 'Обсяг пам’яті, акумулятор',
+          },
+          disadvantages: {
+            title: 'Недоліки',
+            text: 'Не виявлено',
+          },
+          images: ['https://picsum.photos/110/100'],
+          coments: [
+            {
+              userName: 'Користувач',
+              date: '1 січня 2023',
+              text: 'Дякую за відгук, я подумаю про недоліки, про які ви згадували, перш ніж зробити покупку.',
+            },
+          ],
+        },
+      },
+    ],
+
+=======
     breadcrumb: [
       { name: 'Головна', url: 'https://github.com/' },
       {
@@ -3325,6 +3496,7 @@ router.get('/shopcatalog', function (req, res) {
         ],
       },
     ],
+>>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
     service: {
       title: 'Our Services',
       description:
@@ -3434,7 +3606,10 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 1076a885bc49d2330ae62cc29984105658e0e59f
+>>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
 // Підключаємо роутер до бек-енду
 module.exports = router
