@@ -1,1 +1,8 @@
-
+<<<<<<< HEAD
+body {
+  width: 1000px;
+=======
+html {
+  max-width: 100px;
+>>>>>>> 1076a885bc49d2330ae62cc29984105658e0e59f
+}
