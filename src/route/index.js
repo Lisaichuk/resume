@@ -269,7 +269,7 @@ router.get('/work', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
-    layout: 'person',
+    layout: 'basic',
 
     person: {
       name: 'Emma Johnson',
@@ -469,7 +469,7 @@ router.get('/bio', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-    layout: 'program',
+    layout: 'basic',
 
     program: {
       excursion: {
@@ -2073,19 +2073,11 @@ router.get('/shopproduct', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-<<<<<<< HEAD
 router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcart', {
-=======
-router.get('/shopprofile', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shopprofile', {
->>>>>>> 32cb473186fbdc6158ea29b6206d9a6ad4e7bbec
     layout: 'shop',
     navigation: {
       links: [
@@ -2180,6 +2172,182 @@ router.get('/shopprofile', function (req, res) {
         {
           text: 'Офрмити кредит',
           link: 'https://www.youtube.com/',
+          isOutline: true,
+        },
+      ],
+    },
+
+    goodsOtherBlock: {
+      title: 'See other products',
+      cards: [
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'iPhone 13',
+          description:
+            'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
+          isHot: false,
+          idNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'MacBook Pro',
+          description:
+            "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
+          isHot: true,
+          idNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'AirPods Pro',
+          description:
+            "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
+          isHot: false,
+          idNew: false,
+        },
+      ],
+    },
+
+    subscribe: {
+      header: 'Unlock Premium Content',
+      description:
+        'Subscribe to access exclusive content and features.',
+      buttons: [
+        {
+          text: 'Register Now',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Buy Subscription',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
+
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/shopprofile', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shopprofile', {
+    layout: 'shop',
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
+      Logo: 'Logo',
+    },
+
     header: 'Мої замовлення',
 
     purchase: {
@@ -2209,7 +2377,7 @@ router.get('/shopprofile', function (req, res) {
           number: '№12587463 від 01.01.2023',
           status: 'Виконано',
           amount: { title: 'Сума', value: '25 000 ₴' },
-          images: ['https://picsum.photos/100/100'],
+          images: ['https://picsum.photos/110/100'],
           button: {
             text: 'Детальніше',
             link: 'https://www.youtube.com/',
@@ -2249,39 +2417,54 @@ router.get('/shopprofile', function (req, res) {
     },
     userInfo: {
       title: 'Особиста інформація',
-
-      profile: {
+      profileData: {
         title: 'Особисті дані',
-        profileData: [
-          {
+        fullName: {
+          surname: {
             title: 'Прізвище',
-            value1: 'Іванов',
-            otherInfo: 'Дата народження',
-            value2: '01.01.2000',
-            text: 'Редагувати',
-            link: 'https://www.youtube.com/',
-            isPrimary: true,
+            value: 'Іванов',
           },
-          {
+          name: {
             title: 'Ім’я',
-            value1: 'Іван',
-            otherInfo: 'Стать',
-            value2: 'Чоловіча',
-            text: 'Очистити',
-            link: 'https://www.youtube.com/',
-            isSecondary: true,
+            value: 'Іван',
           },
-          {
+          middleName: {
             title: 'По-батькові',
-            value1: 'Іванович',
-            otherInfo: 'Мова',
-            value2: 'Українська',
-            text: 'Видалити',
-            link: 'https://www.youtube.com/',
-            isDanger: true,
+            value: 'Іванович',
           },
-        ],
+        },
+        otherInfo: {
+          birthday: {
+            title: 'Дата народження',
+            value: '01.01.2000',
+          },
+          sex: {
+            title: 'Стать',
+            value: 'Чоловіча',
+          },
+          language: {
+            title: 'Мова',
+            value: 'Українська',
+          },
+        },
       },
+      buttons: [
+        {
+          text: 'Редагувати',
+          link: 'https://www.youtube.com/',
+          isPrimary: true,
+        },
+        {
+          text: 'Очистити',
+          link: 'https://www.youtube.com/',
+          isSecondary: true,
+        },
+        {
+          text: 'Видалити',
+          link: 'https://www.youtube.com/',
+          isDanger: true,
+        },
+      ],
       recipients: {
         title: 'Отримувачі',
         users: [
@@ -2549,33 +2732,6 @@ router.get('/shoporder', function (req, res) {
         },
       ],
     },
-
-    goodsOtherBlock: {
-      title: 'See other products',
-      cards: [
-        {
-          image: 'https://picsum.photos/300/150',
-          title: 'iPhone 13',
-          description:
-            'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
-          isHot: false,
-          idNew: false,
-        },
-        {
-          image: 'https://picsum.photos/240/150',
-          title: 'MacBook Pro',
-          description:
-            "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
-          isHot: true,
-          idNew: false,
-        },
-        {
-          image: 'https://picsum.photos/240/150',
-          title: 'AirPods Pro',
-          description:
-            "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
-          isHot: false,
-          idNew: false,
     delivery: {
       title: 'Доставка',
       select: [
@@ -2832,10 +2988,7 @@ router.get('/shoporder', function (req, res) {
 })
 
 // ================================================================
-<<<<<<< HEAD
 
-=======
->>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -2902,18 +3055,6 @@ router.get('/shopnews', function (req, res) {
         },
       ],
     },
-
-    subscribe: {
-      header: 'Unlock Premium Content',
-      description:
-        'Subscribe to access exclusive content and features.',
-      buttons: [
-        {
-          text: 'Register Now',
-          link: 'https://www.youtube.com/',
-        },
-        {
-          text: 'Buy Subscription',
     newsOtherBlock: {
       title: 'See other news',
       cards: [
@@ -3059,28 +3200,113 @@ router.get('/shopnews', function (req, res) {
 })
 
 // ================================================================
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
+
+router.get('/index', function (req, res) {
+  res.render('index', {
+    layout: 'index',
+    links: [
+      {
+        name: 'Biography',
+        href: '/bio',
+      },
+      {
+        name: 'Car',
+        href: '/car',
+      },
+      {
+        name: 'Education',
+        href: '/education',
+      },
+      {
+        name: 'Education',
+        href: '/education',
+      },
+      {
+        name: 'Facebook',
+        href: '/facebook',
+      },
+      {
+        name: 'JS',
+        href: '/js',
+      },
+      {
+        name: 'Mac',
+        href: '/mac',
+      },
+      {
+        name: 'Person',
+        href: '/person',
+      },
+      {
+        name: 'Program',
+        href: '/program',
+      },
+      {
+        name: 'Shop cart',
+        href: '/shopcart',
+      },
+      {
+        name: 'Shop home',
+        href: '/shophome',
+      },
+      {
+        name: 'Shop news',
+        href: '/shopnews',
+      },
+      {
+        name: 'Shop order',
+        href: '/shoporder',
+      },
+      {
+        name: 'Shop product',
+        href: '/shopproduct',
+      },
+      {
+        name: 'Shop profile',
+        href: '/shopprofile',
+      },
+      {
+        name: 'Skills',
+        href: '/skills',
+      },
+      {
+        name: 'Summary',
+        href: '/summary',
+      },
+      {
+        name: 'Task21',
+        href: '/task21',
+      },
+      {
+        name: 'Task22',
+        href: '/task22',
+      },
+      {
+        name: 'Task31',
+        href: '/task31',
+      },
+      {
+        name: 'Web',
+        href: '/web',
+      },
+      {
+        name: 'Work',
+        href: '/work',
+      },
+    ],
+  })
+})
+// ================================================================
 
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-<<<<<<< HEAD
 router.get('/shopreview', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
-=======
-router.get('/shopcatalog', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shopcatalog', {
->>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
-    layout: 'shop',
+    // layout: 'shop',
     navigation: {
       links: [
         {
@@ -3098,7 +3324,6 @@ router.get('/shopcatalog', function (req, res) {
       ],
       Logo: 'Logo',
     },
-<<<<<<< HEAD
     formBlock: {
       header: 'Відгуки покупців про Ноут',
       rating: {
@@ -3253,7 +3478,142 @@ router.get('/shopcatalog', function (req, res) {
       },
     ],
 
-=======
+    service: {
+      title: 'Our Services',
+      description:
+        'We offer a variety of services to meet your needs, including web design, content creation, and social media management.',
+      buttons: [
+        {
+          text: 'Show More',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
+
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/shopcatalog', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shopcatalog', {
+    // layout: 'shop',
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
+      Logo: 'Logo',
+    },
     breadcrumb: [
       { name: 'Головна', url: 'https://github.com/' },
       {
@@ -3388,7 +3748,7 @@ router.get('/shopcatalog', function (req, res) {
           },
         ],
         characteristics: [
-          { title: 'Діагональ', value: '15,6"' },
+          { title: 'Діагональ', value: '15,6' },
           { title: 'Екран', value: 'IPS' },
           {
             title: 'Процесор',
@@ -3496,7 +3856,6 @@ router.get('/shopcatalog', function (req, res) {
         ],
       },
     ],
->>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
     service: {
       title: 'Our Services',
       description:
@@ -3606,10 +3965,5 @@ router.get('/shopcatalog', function (req, res) {
 })
 
 // ================================================================
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 1076a885bc49d2330ae62cc29984105658e0e59f
->>>>>>> 01bbe1bbef967bc3442ca62e94dab3a88eee85ac
 // Підключаємо роутер до бек-енду
 module.exports = router
